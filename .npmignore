@@ -1,14 +1,3 @@
-*.log
-/.*/
-/_book/
-/coverage/
-/docs/
-/examples/
-/test/
-/.eslint*
-/.flowconfig
-/.gitignore
-/.npmignore
-/.travis.yml
-/book.json
-/webpack.*
+node_modules
+.DS_Store
+npm-debug.log

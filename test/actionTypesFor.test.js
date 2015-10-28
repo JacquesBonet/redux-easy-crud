@@ -1,4 +1,4 @@
-var actionTypesFor  = require('./../lib/actionTypesFor');
+var actionTypesFor  = require('./../src/actionTypesFor');
 var test            = require('ava');
 var actionTypes     = actionTypesFor('users');
 
