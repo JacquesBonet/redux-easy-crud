@@ -9,8 +9,9 @@ import { applyMiddleware }               from 'redux'
 import { combineReducers }               from 'redux'
 import { createStore }                   from 'redux'
 import { Provider }                      from 'react-redux'
-import reduxCrud                         from 'redux-crud'
+import reduxCrud                         from 'redux-easy-crud'
 import todosReducer                      from './todos/reducer'
+import statusReducer                     from './todos/status'
 import TodosIndex                        from './todos/Index.jsx'
 
 const log           = bows('app')
@@ -24,6 +25,7 @@ const finalCreateStore = compose(
 
 const allReducers = combineReducers({
   todos:           todosReducer,
+  status:          statusReducer
 })
 
 const store = finalCreateStore(allReducers)

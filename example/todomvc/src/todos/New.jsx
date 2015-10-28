@@ -16,9 +16,9 @@ class Comp extends React.Component {
 
   getCleanState() {
     return {
-      todo: SI({
+      todo: {
         title: '',
-      }),
+      },
     }
   }
 

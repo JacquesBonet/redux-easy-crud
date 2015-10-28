@@ -1,9 +1,9 @@
 var test              = require('ava');
-var actionCreatorsFor = require('./actionCreatorsFor');
+var actionsCreatorsFor = require('./actionsCreatorsFor');
 
 var error             = {};
-var actionCreators    = actionCreatorsFor('users');
-var subject           =' actionCreatorsFor: ';
+var actionCreators    = actionsCreatorsFor('users');
+var subject           =' actionsCreatorsFor: ';
 var arrayRegEx        = /Expected record not to be an array/;
 
 function makeUser() {

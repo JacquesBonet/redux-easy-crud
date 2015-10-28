@@ -27,16 +27,14 @@ class Comp extends React.Component {
   onChange(event) {
     const { value } = event.target
     this.setState({
-      title: value,
+      title: value
     })
   }
 
   onSave(event) {
     event.preventDefault()
-    let todo = this.props.todo
-    todo = todo.merge(this.state)
-
-    this.props.onCommit(todo)
+    let todo = { title: this.state.title}
+    this.props.onCommit( todo)
   }
 
   render() {

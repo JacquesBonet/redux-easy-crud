@@ -1,7 +1,7 @@
 {
-  "name": "react-starter",
+  "name": "react-redux-example",
   "version": "1.0.0",
-  "description": "React starter",
+  "description": "React redux example",
   "main": "webpack.config.js",
   "repository": {
     "type": "git",
@@ -41,6 +41,7 @@
     "react-fa": "~3.4.0",
     "react-redux": "^3.1.0",
     "redux": "^3.0.0",
+    "redux-easy-crud": "^0.7.0",
     "redux-logger": "~1.0.5",
     "redux-thunk": "~0.1.0",
     "seamless-immutable": "~3.0.0",
@@ -51,7 +52,6 @@
     "webpack-dev-middleware": "^1.2.0"
   },
   "dependencies": {
-    "json-server": "^0.8.1",
-    "redux-easy-crud": "~0.1.0"
+    "json-server": "^0.8.1"
   }
 }

@@ -54,7 +54,7 @@ class Comp extends React.Component {
   }
 
   renderTodos() {
-    return this.props.todos.map((todo, index) => {
+    return _.map(this.props.todos, (todo) => {
       return (
         <tr>
           <td>
@@ -85,6 +85,8 @@ class Comp extends React.Component {
             {this.renderTodos()}
           </tbody>
         </table>
+        <h1>Status</h1>
+        <h2>{this.props.status.type} {this.props.status.error}</h2>
       </section>
     )
   }
@@ -92,6 +94,7 @@ class Comp extends React.Component {
 
 Comp.propTypes = {
   todos: PT.array.isRequired,
+  status: PT.object.isRequired,
   dispatch: PT.func.isRequired,
 }
 

@@ -1,6 +1,6 @@
 var test            = require('ava');
 var rewire          = require("rewire");
-var reducersFor     = rewire('../lib/reducersFor.js');
+var reducersFor     = rewire('../src/reducersFor.js');
 var sinon           = require('sinon');
 var reducers        = reducersFor('users');
 var current         = [{}];
