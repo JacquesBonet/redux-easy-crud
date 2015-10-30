@@ -3,7 +3,7 @@ function statusFor() {
 
   return function status(state, action) {
     return action;
-  }
+  };
 }
 
 module.exports = statusFor;

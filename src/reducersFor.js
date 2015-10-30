@@ -8,21 +8,21 @@ var updateSuccess   = require('./reducers/update/success');
 var deleteSuccess   = require('./reducers/delete/success');
 
 function reducersFor(resourceName, args) {
-  if (resourceName == null) throw new Error('reducersFor: Expected resourceName');
+  if (resourceName === null) throw new Error('reducersFor: Expected resourceName');
 
   args = args || {};
 
-  var defaults    = {
-    key:          'id',
+  let defaults    = {
+    key: 'id',
     resourceName: resourceName,
   };
 
-  var config      = _.defaults(args, defaults);
+  let config = _.defaults(args, defaults);
 
   return function reducers(state, action) {
     state = state || SI([]);
 
-    if (action == null) throw new Error(resourceName + ' reducers: Expected action');
+    if (action === null) throw new Error(resourceName + ' reducers: Expected action');
 
     var actionTypes = actionTypesFor(resourceName);
     var record      = action.record;
@@ -44,7 +44,7 @@ function reducersFor(resourceName, args) {
       default:
         return state;
     }
-  }
+  };
 }
 
 module.exports = reducersFor;

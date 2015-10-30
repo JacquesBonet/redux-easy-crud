@@ -3,6 +3,7 @@ import { connect }    from 'react-redux'
 import actions        from './actions'
 import Icon           from 'react-fa'
 import bows           from 'bows'
+import _              from 'lodash'
 
 const PT              = React.PropTypes
 const baseClass       = 'todos--List'
@@ -16,7 +17,7 @@ class Comp extends React.Component {
 
   onToggle(todo, done, event) {
     event.preventDefault()
-    todo = todo.merge({done})
+    _.merge( todo, todo, {done})
     const action = actions.update(todo)
     this.dispatch(action)
   }

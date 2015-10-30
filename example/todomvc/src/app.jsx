@@ -11,7 +11,7 @@ import { createStore }                   from 'redux'
 import { Provider }                      from 'react-redux'
 import reduxCrud                         from 'redux-easy-crud'
 import todosReducer                      from './todos/reducer'
-import statusReducer                     from './todos/status'
+import statusReducer                      from './todos/status'
 import TodosIndex                        from './todos/Index.jsx'
 
 const log           = bows('app')

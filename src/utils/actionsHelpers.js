@@ -1,4 +1,5 @@
 import _            from 'lodash'
+import SI           from 'seamless-immutable'
 import axios        from 'axios'
 import cuid         from 'cuid'
 
@@ -66,9 +67,10 @@ let actionHelpers = {
     return promise
   },
 
-  create( entity, dispatch, baseActionCreators, url) {
-    let cid = entity.id
-    if (cid === null) {
+  create( aEntity, dispatch, baseActionCreators, url) {
+    let entity = SI(aEntity)
+    let cid = aEntity.id
+    if (cid === undefined) {
       cid = cuid()
       entity = entity.merge({id: cid})
     }

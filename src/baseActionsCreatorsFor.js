@@ -13,7 +13,7 @@ function baseActionsCreatorsFor(resourceName, config) {
     invariant(error != null, 'Expected error in ' + actionCreatorName);
   }
 
-  function assertOneRecord(actionCreatorName, record) {
+  function assertOneRecord( actionCreatorName, record) {
     invariant(record != null, 'Expected record in ' + actionCreatorName);
     assertNotArray(config, 'createStart', record);
     invariant(record[key] != null, 'Expected record.' + key + ' in ' + actionCreatorName);
@@ -27,7 +27,7 @@ function baseActionsCreatorsFor(resourceName, config) {
     fetchStart: function() {
       return {
         type: actionTypes.fetchStart,
-      }
+      };
     },
 
     fetchSuccess: function(records) {
@@ -36,7 +36,7 @@ function baseActionsCreatorsFor(resourceName, config) {
       return {
         type:    actionTypes.fetchSuccess,
         records: records,
-      }
+      };
     },
 
     fetchError: function(error) {
@@ -45,17 +45,17 @@ function baseActionsCreatorsFor(resourceName, config) {
       return {
         type:  actionTypes.fetchError,
         error: error,
-      }
+      };
     },
 
     createStart: function(record) {
       var name = 'createStart';
       assertOneRecord(name, record);
-      
+
       return {
         type:    actionTypes.createStart,
         record:  record,
-      }
+      };
     },
 
     createSuccess: function(record, clientGeneratedKey) {
@@ -66,7 +66,7 @@ function baseActionsCreatorsFor(resourceName, config) {
         type:    actionTypes.createSuccess,
         record:  record,
         cid:     clientGeneratedKey,
-      }
+      };
     },
 
     createError: function(error, record) {
@@ -78,7 +78,7 @@ function baseActionsCreatorsFor(resourceName, config) {
         type:    actionTypes.createError,
         error:   error,
         record:  record,
-      }
+      };
     },
 
     updateStart: function(record) {
@@ -88,7 +88,7 @@ function baseActionsCreatorsFor(resourceName, config) {
       return {
         type:    actionTypes.updateStart,
         record:  record,
-      }
+      };
     },
 
     updateSuccess: function(record) {
@@ -98,7 +98,7 @@ function baseActionsCreatorsFor(resourceName, config) {
       return {
         type:    actionTypes.updateSuccess,
         record:  record,
-      }
+      };
     },
 
     updateError: function(error, record) {
@@ -110,7 +110,7 @@ function baseActionsCreatorsFor(resourceName, config) {
         type:    actionTypes.updateError,
         error:   error,
         record:  record,
-      }
+      };
     },
 
     deleteStart: function(record) {
@@ -120,7 +120,7 @@ function baseActionsCreatorsFor(resourceName, config) {
       return {
         type:    actionTypes.deleteStart,
         record:  record,
-      }
+      };
     },
 
     deleteSuccess: function(record) {
@@ -130,7 +130,7 @@ function baseActionsCreatorsFor(resourceName, config) {
       return {
         type:    actionTypes.deleteSuccess,
         record:  record,
-      }
+      };
     },
 
     deleteError: function(error, record) {
@@ -142,8 +142,8 @@ function baseActionsCreatorsFor(resourceName, config) {
         type:    actionTypes.deleteError,
         error:   error,
         record:  record,
-      }
-    }
+      };
+    },
   };
 }
 

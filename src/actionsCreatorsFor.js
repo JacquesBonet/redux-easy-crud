@@ -4,7 +4,7 @@ import actions  from './utils/actionsHelpers'
 
 function actionsCreatorsFor( resource, url) {
 
-  const baseActions = baseActionsCreatorsFor.actionsCreatorFor(resource)
+  const baseActions = baseActionsCreatorsFor(resource)
 
   let creators = {
     fetch() {

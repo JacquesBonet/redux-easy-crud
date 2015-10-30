@@ -2,6 +2,12 @@
   "extends": "airbnb",
 
   "rules": {
+      "valid-jsdoc": 0,
+
+      // Disable Airbnb-specific rules unless need to support it
+      "comma-dangle": 0,
+      "id-length": 0,
+
       // React rules
       "react/display-name": 0,
       "react/forbid-prop-types": 0,
