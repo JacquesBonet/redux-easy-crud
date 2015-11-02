@@ -3,19 +3,12 @@
     {
       "id": 1,
       "title": "Learn Elm",
-      "done": true
-    },
-    {
-      "title": "a9",
-      "id": "cige16ccx000137514bymst5m"
-    },
-    {
-      "title": "t4",
-      "id": "cige1opt600013751groxmq54"
+      "done": false
     },
     {
       "title": "io9",
-      "id": "cige1p0vp00023751y89d76xs"
+      "id": "cige1p0vp00023751y89d76xs",
+      "done": false
     }
   ]
 }
