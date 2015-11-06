@@ -12,9 +12,12 @@ It provide the following enhancements :
 
 To follow :
 
-* a new api permitting to read a ressource from its id
+* Api permitting to read a ressource from its id
 
-* new transactionals api, permitting to create or update a set of ressources. If a update or write of a resource fail, the system is roolbacked to its origin.
+* Transactionals api, permitting to create or update a set of ressources. If the action fail, the system is roolbacked to its origin.
+
+* Status historisation 
+
 
 
 ### Testing
